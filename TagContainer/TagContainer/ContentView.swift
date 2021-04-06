@@ -68,16 +68,16 @@ struct ContentView: View {
                                     Text(tag.value)
                                         .foregroundColor(
                                             selectedtags.contains(tag) ?
-                                            Color(.systemBackground) :
-                                            Color(.label)
+                                                Color(.systemBackground) :
+                                                Color(.label)
                                         )
                                         .font(.system(size: 12, weight: .semibold))
                                         .padding(.horizontal, 15)
                                         .frame(height: 25)
                                         .background(
                                             selectedtags.contains(tag) ?
-                                            Color(.label) :
-                                            Color(.systemBackground)
+                                                Color(.label) :
+                                                Color(.systemBackground)
                                         )
                                         .clipShape(Capsule())
                                     
@@ -118,7 +118,7 @@ struct ContentView: View {
                 .clipShape(Capsule())
                 .padding(10)
                 // Uncomment if you want to see some extra sauce animation
-//                .onReceive(timer, perform: animation)
+                //                .onReceive(timer, perform: animation)
             }
         }
     }
@@ -139,7 +139,7 @@ struct ContentView: View {
             index += 1
             allTags.append(.init(values: []))
             allTags[index].values.append(tag)
-                
+            
         }
     }
     
@@ -169,22 +169,9 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 extension String {
-    
     func widthOfString(usingFont font: UIFont) -> CGFloat {
         let fontAttributes = [NSAttributedString.Key.font: font]
         let size = self.size(withAttributes: fontAttributes)
         return size.width
-    }
-    
-    func heightOfString(usingFont font: UIFont) -> CGFloat {
-        let fontAttributes = [NSAttributedString.Key.font: font]
-        let size = self.size(withAttributes: fontAttributes)
-        return size.height
-    }
-    
-    func sizeOfString(usingFont font: UIFont) -> CGSize {
-        let fontAttributes = [NSAttributedString.Key.font: font]
-        return self.size(withAttributes: fontAttributes)
-        
     }
 }
