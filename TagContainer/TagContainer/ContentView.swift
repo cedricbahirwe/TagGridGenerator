@@ -118,7 +118,7 @@ struct ContentView: View {
                 .clipShape(Capsule())
                 .padding(10)
                 // Uncomment if you want to see some extra sauce animation
-                .onReceive(timer, perform: animation)
+//                .onReceive(timer, perform: animation)
             }
         }
     }
